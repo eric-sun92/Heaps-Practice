@@ -1,0 +1,32 @@
+this is heap practice/implementation (what i learned)
+
+heap is just a non-linear data structure
+implemented using a class with a storage of data in (array) as well as size
+
+Min-heap - (can also do max-heap by switching all the < to > vice versa, p easy)
+implementation rules: - each parent node must smaller than its child nodes - each parent node can only have 0 or 1 or 2 child nodes - each parent node is filled before the next parent node can be filled - the root node is the storage min (given by the name)
+
+functions: - insert => uses heapifyUp
+-insert value at the this.size (next available spot)
+-update the heap size
+-heapifyUp the value (put it in correct spot to abide by previously stated rules)
+-heapifyUp can be implemented Iteratively/Recursively ( i chose to use recursive but also coded the iterative way because trees are recursive)
+-if the current node has parent nodes
+-check if current node is smaller than parent nodes
+-if smaller, then swap the values and indexes
+-if not ur done
+-if not ur done
+
+    - removeMin => uses heapifyDown
+        -if storage[0] exists remove it,
+        -then set the empty placeholder at top of tree with the last node in tree
+        -then heapifyDown the current node(very top node)
+            -check if has leftNode
+                -if so check if has rigthNode
+                    -if so check to see which child Node is smallest
+            -comapare smallest child node to the current Node
+                -if current Node is larger, then swap node values and indexes and recursively call with next index
+                -if not ur done
+            -if not ur done
+
+
